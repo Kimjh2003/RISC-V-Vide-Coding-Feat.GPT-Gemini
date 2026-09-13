@@ -1,4 +1,4 @@
-# RISC-V accelerator simulator — Codex revision
+# RISC-V accelerator simulator — GPT-5.6 Terra 수정
 
 기존 PDF 기반 예시를 실행 가능한 C++20 시뮬레이터 모듈로 재구성한 리포다. 이 프로젝트는 CPU, GPU, NPU가 같은 RISC-V instruction을 재해석하는 모델을 쓰지 않는다. RV64 표준 instruction decode와 XVec 가속기 command ABI를 분리하고, CPU는 MMIO doorbell로 queue를 알리며 가속기는 descriptor ring을 소비한다.
 
@@ -38,5 +38,3 @@ cmake -S . -B build -DRVSIM_BUILD_TESTS=ON
 cmake --build build
 ctest --test-dir build --output-on-failure
 ```
-
-PDF 파일은 초기 바이브 코딩 예시로 남겨뒀다. 현재 구현의 규격이나 실행 경로로 사용하면 안 된다.
